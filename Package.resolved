@@ -1,0 +1,97 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Socket",
+        "repositoryURL": "https://github.com/IBM-Swift/BlueSocket.git",
+        "state": {
+          "branch": null,
+          "revision": "f82e1401f04f62b2e8ce4670456d104466957810",
+          "version": "1.0.50"
+        }
+      },
+      {
+        "package": "SSLService",
+        "repositoryURL": "https://github.com/IBM-Swift/BlueSSLService.git",
+        "state": {
+          "branch": null,
+          "revision": "d6616def31a12088034f0a63ed4646772eff5bce",
+          "version": "1.0.50"
+        }
+      },
+      {
+        "package": "Color",
+        "repositoryURL": "https://github.com/soffes/Color",
+        "state": {
+          "branch": null,
+          "revision": "5e645c105cfd5e9e00f3b7f0dbe327d92b03a4d1",
+          "version": "0.1.2"
+        }
+      },
+      {
+        "package": "Kitura",
+        "repositoryURL": "https://github.com/IBM-Swift/Kitura",
+        "state": {
+          "branch": null,
+          "revision": "0777165ed5b966ad2e62f9f9101cfa8b283e7684",
+          "version": "2.8.1"
+        }
+      },
+      {
+        "package": "Kitura-net",
+        "repositoryURL": "https://github.com/IBM-Swift/Kitura-net.git",
+        "state": {
+          "branch": null,
+          "revision": "5fc06b21e8e615147fa8341c249ae010a1b41fba",
+          "version": "2.3.0"
+        }
+      },
+      {
+        "package": "Kitura-TemplateEngine",
+        "repositoryURL": "https://github.com/IBM-Swift/Kitura-TemplateEngine.git",
+        "state": {
+          "branch": null,
+          "revision": "d62d74bca48c6fb76f9fc1f48eeb2d7af415e80b",
+          "version": "2.0.1"
+        }
+      },
+      {
+        "package": "KituraContracts",
+        "repositoryURL": "https://github.com/IBM-Swift/KituraContracts.git",
+        "state": {
+          "branch": null,
+          "revision": "a30e2fb79e926672776a05ec6b919c239870a221",
+          "version": "1.2.1"
+        }
+      },
+      {
+        "package": "LoggerAPI",
+        "repositoryURL": "https://github.com/IBM-Swift/LoggerAPI.git",
+        "state": {
+          "branch": null,
+          "revision": "3357dd9526cdf9436fa63bb792b669e6efdc43da",
+          "version": "1.9.0"
+        }
+      },
+      {
+        "package": "swift-log",
+        "repositoryURL": "https://github.com/apple/swift-log.git",
+        "state": {
+          "branch": null,
+          "revision": "e8aabbe95db22e064ad42f1a4a9f8982664c70ed",
+          "version": "1.1.1"
+        }
+      },
+      {
+        "package": "TypeDecoder",
+        "repositoryURL": "https://github.com/IBM-Swift/TypeDecoder.git",
+        "state": {
+          "branch": null,
+          "revision": "a5978582981f7151594bdaf5fe0d3cd9b1d2d0c0",
+          "version": "1.3.4"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
