@@ -1,9 +1,11 @@
 import Color
 import Kitura
+import KituraCompression
 import KituraStencil
 
 let router = Router()
 
+router.all(middleware: Compression())
 router.add(templateEngine: StencilTemplateEngine())
 
 router.get("/:foreground/:background") { request, response, next in

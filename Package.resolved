@@ -38,6 +38,15 @@
         }
       },
       {
+        "package": "KituraCompression",
+        "repositoryURL": "https://github.com/IBM-Swift/Kitura-Compression.git",
+        "state": {
+          "branch": null,
+          "revision": "e0c92e20ffa4840aeff2d81c52106ad53108ad70",
+          "version": "2.2.2"
+        }
+      },
+      {
         "package": "Kitura-net",
         "repositoryURL": "https://github.com/IBM-Swift/Kitura-net.git",
         "state": {
