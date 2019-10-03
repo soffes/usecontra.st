@@ -1,7 +1,10 @@
 import Color
 import Kitura
+import KituraStencil
 
 let router = Router()
+
+router.add(templateEngine: StencilTemplateEngine())
 
 router.get("/:foreground/:background") { request, response, next in
     guard let foregroundHex = request.parameters["foreground"],
@@ -17,9 +20,25 @@ router.get("/:foreground/:background") { request, response, next in
     }
 
     let ratio = foreground.contrastRatio(to: background)
+    let formattedRatio = String(format: "%0.2f", ratio)
     let score = ConformanceLevel(contrastRatio: ratio)
 
-    try response.send("\(score) \(ratio)").end()
+    let context: [String: String] = [
+        "title": "Contrast — \(score.description) \(formattedRatio)",
+        "ratio": formattedRatio,
+        "score": score.description,
+        "foreground": foreground.hex,
+        "background": background.hex
+    ]
+
+    do {
+        try response.render("Score.stencil", context: context)
+    } catch {
+        response.error = error
+        next()
+    }
+
+    response.status(.OK)
 }
 
 router.get() { request, response, next in
