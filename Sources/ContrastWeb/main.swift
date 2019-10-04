@@ -7,9 +7,10 @@ let router = Router()
 
 router.all(middleware: Compression())
 router.add(templateEngine: StencilTemplateEngine())
+router.all("/assets", middleware: StaticFileServer(path: "./assets", options: StaticFileServer.Options(serveIndexForDirectory: false)))
 
 router.get("/:foreground/:background") { request, response, next in
-    guard let foregroundHex = request.parameters["foreground"],
+    guard let foregroundHex = request.parameters["foreground"], foregroundHex != "assets",
         let backgroundHex = request.parameters["background"] else
     {
         next()
@@ -17,7 +18,8 @@ router.get("/:foreground/:background") { request, response, next in
     }
 
     guard let foreground = RGBColor(hex: foregroundHex), let background = RGBColor(hex: backgroundHex) else {
-        try response.send("invalid colors").end()
+        try response.render("error.stencil", context: ["title": "Error"])
+        response.status(.badRequest)
         return
     }
 
@@ -26,11 +28,12 @@ router.get("/:foreground/:background") { request, response, next in
     let score = ConformanceLevel(contrastRatio: ratio)
 
     let context: [String: String] = [
-        "title": "Contrast — \(score.description) \(formattedRatio)",
+        "title": "\(score.description) \(formattedRatio)",
         "ratio": formattedRatio,
         "score": score.description,
         "foreground": foreground.hex,
-        "background": background.hex
+        "background": background.hex,
+        "extendedDescription": score.extendedDescription
     ]
 
     do {
@@ -45,6 +48,12 @@ router.get("/:foreground/:background") { request, response, next in
 
 router.get() { request, response, next in
     let path = request.parsedURL.path ?? "/"
+
+    if path.hasPrefix("/assets/") {
+        next()
+        return
+    }
+
     try response.redirect("https://usecontrast.com\(path)").end()
 }
 

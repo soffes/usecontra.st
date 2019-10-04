@@ -1,0 +1,331 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align:baseline
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display:block
+}
+
+body {
+    line-height:1
+}
+
+ol, ul {
+    list-style:none
+}
+
+blockquote, q {
+    quotes:none
+}
+
+blockquote:before, blockquote:after {
+    content: "";
+    content:none
+}
+
+q:before, q:after {
+    content: "";
+    content:none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing:0
+}
+
+*, * :before, * :after {
+    box-sizing:border-box
+}
+
+* ::-moz-selection {
+    background: lightgrey;
+    outline:1px solid red
+}
+
+* ::selection {
+    background:lightgrey
+}
+
+body {
+    font-size: 16px;
+    font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif
+}
+
+strong {
+    font-weight:500
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    color:#111112
+}
+
+h1 {
+    font-size: 3.75rem;
+    letter-spacing:-.05rem
+}
+
+h2 {
+    font-size: 2rem;
+    padding:2rem 0
+}
+
+@media (min-width: 640px) {
+    h2 {
+        font-size:2.5rem
+    }
+}
+
+.body-copy span {
+    color: black;
+    font-style:italic
+}
+
+p, ul, li {
+    font-size: 1rem;
+    line-height: 1.5em;
+    color:#333334
+}
+
+ul {
+    list-style-type:square
+}
+
+ol {
+    list-style-type:decimal
+}
+
+ul.contrast-ul-emoji {
+    list-style-type:none
+}
+
+main {
+    max-width: 80rem;
+    margin: auto;
+    padding: 0 1.5rem 0;
+    position:relative
+}
+
+@media (min-width: 640px) {
+    main {
+        padding:0 1.5rem 0
+    }
+}
+
+nav {
+    text-align: center;
+    padding:1rem 0
+}
+
+@media (min-width: 640px) {
+    nav {
+        padding:2rem 0
+    }
+}
+
+nav ul li {
+    display: inline-block;
+    padding-right:1.5rem
+}
+
+nav ul li:last-child {
+    padding-right:0
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333334;
+    font-size:.875rem
+}
+
+nav ul li a.active {
+    color: #111112;
+    font-weight:500
+}
+
+nav ul li a:hover {
+    text-decoration:underline
+}
+
+@media (min-width: 640px) {
+    nav ul li a {
+        font-size:.75rem
+    }
+}
+
+nav ul li a.contrast-logo svg {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top:.2rem
+}
+
+nav ul li a span {
+    display:none
+}
+
+.contrast-content {
+    width: 100%;
+    max-width: 42rem;
+    margin: auto;
+    padding:0 2rem
+}
+
+.contrast-content h1 {
+    padding: 2rem 0 1.5rem;
+    font-size:2.5rem
+}
+
+@media (min-width: 640px) {
+    .contrast-content h1 {
+        font-size: 3.125rem;
+        padding:2rem 0 3rem
+    }
+}
+
+.contrast-content p, .contrast-content ul, .contrast-content li {
+    font-size: 1rem;
+    line-height:1.6em
+}
+
+@media (min-width: 640px) {
+    .contrast-content p, .contrast-content ul, .contrast-content li {
+        font-size:1.2rem
+    }
+}
+
+.contrast-content p, .contrast-content ul, .contrast-content ol {
+    padding-bottom:1.5rem
+}
+
+.contrast-content ul, .contrast-content ol {
+    margin-left:1.5rem
+}
+
+.contrast-content ul.contrast-ul-emoji {
+    margin-left:0
+}
+
+.contrast-content h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    padding-bottom: .5rem;
+    line-height:1.35em
+}
+
+@media (min-width: 640px) {
+    .contrast-content h2 {
+        font-size:1.325rem
+    }
+}
+
+.contrast-content a {
+    color: #333334;
+    text-decoration: none;
+    box-shadow: inset 0 -2px 0 0 #111112;
+    -webkit-transition: all .25s ease-out;
+    transition:all .25s ease-out
+}
+
+.contrast-content a:hover {
+    color: #111112;
+    box-shadow: inset 0 -14px 0 0 lightgrey;
+    -webkit-transition: all .25s ease-out;
+    transition:all .25s ease-out
+}
+
+.contrast-content img {
+    width:100%
+}
+
+.contrast-content code {
+    font-size: .75em;
+    padding: .125rem .25rem;
+    background: rgba(51, 51, 52, 0.05);
+    color: #df0050;
+    box-shadow: 0 0 0 1px rgba(51, 51, 52, 0.2);
+    border-radius: 2px;
+    font-family:native, menlo, monospace
+}
+
+.contrast-content strong {
+    color:#111112
+}
+
+.contrast-content blockquote {
+    border-left: 1px solid rgba(51, 51, 52, 0.5);
+    margin:0 0 1.5rem .25rem
+}
+
+.contrast-content blockquote p {
+    font-size: 1.1em;
+    padding:0 0 0 1.5rem
+}
+
+.contrast-page-score nav ul li {
+    padding-right:.5rem
+}
+
+.contrast-score-content {
+    width: 100%;
+    max-width: 42rem;
+    margin: auto;
+    padding: 0 2rem;
+    text-align: center;
+    position: relative;
+    margin-bottom:2rem
+}
+
+.contrast-score {
+    padding:6rem 0
+}
+
+@media (min-width: 640px) {
+    .contrast-score {
+        padding:8rem 0
+    }
+}
+
+.contrast-score h2 {
+    font-size: 4rem;
+    font-weight: 500;
+    margin: 0;
+    padding:0
+}
+
+@media (min-width: 640px) {
+    .contrast-score h2 {
+        font-size:6rem
+    }
+}
+
+.contrast-score h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    padding:.5rem
+}
+
+.contrast-data {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-transform: uppercase;
+    display: table-cell;
+    padding:2rem 2.5rem
+}
+
+.contrast-data h4 {
+    font-size: 1rem;
+    display: inline-block;
+    float:left
+}
+
+.contrast-data h4:last-child {
+    float: right
+}

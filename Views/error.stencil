@@ -1,0 +1,12 @@
+{% extends "layout.stencil" %}
+
+{% block content %}
+<div class="contrast-score-content">
+  <div class="contrast-score">
+    <h2>¯\_(ツ)_/¯</h2>
+  </div>
+</div>
+<div class="contrast-content" id="contrast-description">
+  <p>Something is wrong with your URL structure. The proper format is <code>usecontra.st/fff/000</code> using either a 3 or 6 digit hexidecimal code for the foreground and background, <a href="https://usecontra.st/fff/000">like this</a>.</p>
+</div>
+{% endblock %}

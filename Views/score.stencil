@@ -1,0 +1,25 @@
+{% extends "layout.stencil" %}
+
+{% block head %}
+<style>
+  .contrast-score h2, .contrast-score h3, .contrast-data h4 { color: #{{ foreground }} }
+  .contrast-score-content { background: #{{ background }} }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="contrast-score-content">
+  <div class="contrast-score">
+      <h2>{{ score }}</h2>
+      <h3>{{ ratio }}</h3>
+    </div>
+    <div class="contrast-data">
+      <h4>#{{ foreground }}</h4>
+      <h4>#{{ background }}</h4>
+    </div>
+  </div>
+  <div class="contrast-content" id="contrast-description">
+    <p>{{ extendedDescription }} For more information, read the <a href="https://usecontrast.com/guide">Contrast Guide</a>.</p>
+  </div>
+</div>
+{% endblock %}
