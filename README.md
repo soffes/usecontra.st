@@ -2,6 +2,16 @@
 
 Simple site written in Swift that shows the contrast of two colors using the [Color](https://github.com/soffes/Color) package.
 
+## Running locally
+
+1. Install Xcode 11
+2. Run `swift package generate-xcodeproj`
+3. Open ContrastWeb.xcodeproj
+4. Select `ContrastWeb` from the dropdown in the top left (not `ContrastWeb-Package`)
+5. Click ▶️
+
+Now the site is running at [localhost:8080](http://localhost:8080)
+
 ## Deploying
 
 This site is deployed to Google Cloud Run.
