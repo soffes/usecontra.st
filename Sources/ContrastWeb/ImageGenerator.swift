@@ -16,9 +16,9 @@ final class ImageGenerator {
     private static let height: Double = 640
     private static let padding: Double = 64
     private static let familyName = "Rubik"
-    private static let logoWidth: Double = 40
-    private static let logoLineWidth: Double = 5
-    private static let logoSquareWidth: Double = 3
+    private static let logoWidth: Double = 48
+    private static let logoLineWidth: Double = 6
+    private static let logoSquareWidth: Double = 3.4
 
     // MARK: - Generating
 
@@ -39,7 +39,8 @@ final class ImageGenerator {
 
         // Score
         context.setFont(size: 184)
-        context.draw(text: score.description, at: (x: width / 2, y: height / 2), horizontalAlignment: .center)
+        context.draw(text: score.description, at: (x: width / 2, y: height / 2), horizontalAlignment: .center,
+                     verticalAlignment: .center)
 
         // Ratio
         context.setFont(size: 56)
