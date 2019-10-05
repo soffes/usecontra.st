@@ -38,17 +38,17 @@ final class ImageGenerator {
         context.setFont(face: (family: familyName, slant: .normal, weight: .bold))
 
         // Score
-        context.setFont(size: 128)
+        context.setFont(size: 184)
         context.draw(text: score.description, at: (x: width / 2, y: height / 2), horizontalAlignment: .center)
 
         // Ratio
-        context.setFont(size: 32)
+        context.setFont(size: 56)
         context.draw(text: String(format: "%0.2f", ratio), at: (x: width / 2, y: height - padding),
                      horizontalAlignment: .center)
 
         // Domain
         context.setFont(face: (family: familyName, slant: .normal, weight: .normal))
-        context.draw(text: "usecontra.st", at: (x: width - padding, y: padding), horizontalAlignment: .right)
+        context.draw(text: "usecontra.st", at: (x: width - padding, y: padding + (logoWidth / 2)), horizontalAlignment: .right)
 
         // Foreground
         context.draw(text: "#\(foreground.hex)", at: (x: padding, y: height - padding), horizontalAlignment: .left)
