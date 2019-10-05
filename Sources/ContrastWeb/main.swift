@@ -37,7 +37,7 @@ router.get("/:foreground/:background") { request, response, next in
     ]
 
     do {
-        try response.render("Score.stencil", context: context)
+        try response.render("score.stencil", context: context)
     } catch {
         response.error = error
         next()
