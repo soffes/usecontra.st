@@ -5,9 +5,8 @@ Simple site written in Swift that shows the contrast of two colors using the [Co
 ## Running locally
 
 1. Install Xcode 11
-2. Run `swift package generate-xcodeproj`
-3. Open ContrastWeb.xcodeproj
-4. Select `ContrastWeb` from the dropdown in the top left (not `ContrastWeb-Package`)
+3. Open the `ContrastWeb` directory in Xcode with File > Open
+4. Select `ContrastWeb` from the dropdown in the top left after all of the packages finish loading
 5. Click ▶️
 
 Now the site is running at [localhost:8080](http://localhost:8080)
@@ -20,7 +19,7 @@ This site is deployed to Google Cloud Run.
 
 Be sure to increment the version in this command:
 
-```
+``` shell
 $ docker build -t gcr.io/usecontrast/contrast-web:v2 .
 ```
 
@@ -28,7 +27,7 @@ $ docker build -t gcr.io/usecontrast/contrast-web:v2 .
 
 This will start the server locally at [localhost:8080](http://localhost:8080). Be sure to update the version in the image name.
 
-```
+``` shell
 $ docker run -d -p 8080:8080 gcr.io/usecontrast/contrast-web:v2
 ```
 
@@ -38,10 +37,14 @@ $ docker run -d -p 8080:8080 gcr.io/usecontrast/contrast-web:v2
 
 Be sure to update the version number in the image name.
 
-```
+``` shell
 $ docker push gcr.io/usecontrast/contrast-web:v2
 ```
 
 ### Deploy the new image
 
-Go to the [console](https://console.cloud.google.com/run/detail/us-central1/contrast/revisions?project=usecontrast) and deploy a new revision with the image version you just pushed.
+Be sure to update the version number in the image name.
+
+``` shell
+$ gcloud beta run deploy contrast-web --image gcr.io/usecontrast/contrast-web:v2
+```
