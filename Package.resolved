@@ -20,6 +20,15 @@
         }
       },
       {
+        "package": "Cairo",
+        "repositoryURL": "https://github.com/soffes/Cairo",
+        "state": {
+          "branch": null,
+          "revision": "831b30aae59bb11342a001775ae31cda288fcfd1",
+          "version": null
+        }
+      },
+      {
         "package": "Color",
         "repositoryURL": "https://github.com/soffes/Color",
         "state": {
