@@ -1,4 +1,5 @@
 import Color
+import Foundation
 import Kitura
 import KituraCompression
 import KituraStencil
@@ -57,5 +58,8 @@ router.get() { request, response, next in
     try response.redirect("https://usecontrast.com\(path)").end()
 }
 
-Kitura.addHTTPServer(onPort: 8080, with: router)
+let port = ProcessInfo.processInfo.environment["PORT"].flatMap(Int.init) ?? 8080
+Kitura.addHTTPServer(onPort: port, with: router)
+
+print("Listening on port \(port)...")
 Kitura.run()
