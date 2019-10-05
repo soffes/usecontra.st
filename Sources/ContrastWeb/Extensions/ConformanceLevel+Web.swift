@@ -5,7 +5,7 @@ extension ConformanceLevel {
         switch self {
         case .aaa:
             return """
-            This text passes the highest tier of contrast accessibility. Scores between 7.5–21 receive <strong>AAA</strong>. This score is valid for all font sizes.
+            This text passes the highest tier of contrast accessibility. Scores between 7–21 receive <strong>AAA</strong>. This score is valid for all font sizes.
             """
         case .aa:
             return """
