@@ -8,18 +8,7 @@
     {% block head %}{% endblock %}
   </head>
   <body class="contrast-page-interior contrast-page-score">
-    <div class="contrast-wrapper">
-      <nav>
-        <ul>
-          <li><a class="contrast-logo" href="/">
-              <svg>
-                <use xlink:href="/assets/logo.svg#target"></use>
-              </svg><span>Home</span></a></li>
-          <li><a href="https://usecontrast.com">Made with Contrast</a></li>
-        </ul>
-      </nav>
-      {% block content %}{% endblock %}
-    </div>
+    {% block content %}{% endblock %}
   </body>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

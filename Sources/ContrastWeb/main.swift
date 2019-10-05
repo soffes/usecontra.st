@@ -18,7 +18,7 @@ router.get("/:foreground/:background") { request, response, next in
     }
 
     guard let foreground = RGBColor(hex: foregroundHex), let background = RGBColor(hex: backgroundHex) else {
-        try response.render("error.stencil", context: ["title": "Error"])
+        try response.render("error.stencil", context: ["title": "Oops, no contrast"])
         response.status(.badRequest)
         return
     }
