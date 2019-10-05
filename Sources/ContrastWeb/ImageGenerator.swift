@@ -16,6 +16,9 @@ final class ImageGenerator {
     private static let height: Double = 640
     private static let padding: Double = 64
     private static let familyName = "Rubik"
+    private static let logoWidth: Double = 40
+    private static let logoLineWidth: Double = 5
+    private static let logoSquareWidth: Double = 3
 
     // MARK: - Generating
 
@@ -53,6 +56,28 @@ final class ImageGenerator {
         // Background
         context.draw(text: "#\(background.hex)", at: (x: width - padding, y: height - padding),
                      horizontalAlignment: .right)
+
+        // Logo outline
+        let logoCenter = (x: padding + (logoWidth / 2), y: padding)
+        context.newSubpath()
+        context.addArc(center: logoCenter, radius: logoWidth / 2, angle: (0, 2 * .pi))
+        context.lineWidth = logoLineWidth
+        context.stroke()
+
+        // Logo mask
+        context.addArc(center: logoCenter, radius: logoWidth / 2, angle: (0, 2 * .pi))
+        context.clip()
+
+        // Logo squares
+        for x in 0..<3 {
+            for y in 0..<7 {
+                let y = padding - (logoWidth / 2) + (logoLineWidth / 4) + (logoSquareWidth * 2 * Double(y))
+                context.addRectangle(x: logoCenter.x + (logoSquareWidth / 2) + (logoSquareWidth * 2 * Double(x)),
+                                     y: y, width: logoSquareWidth, height: logoSquareWidth)
+            }
+        }
+
+        context.fill()
 
         // Render
         return try surface.writePNG()
