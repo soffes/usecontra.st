@@ -1,6 +1,21 @@
 {% extends "layout.stencil" %}
 
 {% block head %}
+<meta itemprop="name" content="Contrast for UI">
+<meta itemprop="description" content="A macOS app for quick access to WCAG color contrast ratios.">
+<meta itemprop="image" content="/og/{{ foreground }}/{{ background }}.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@usecontrast">
+<meta name="twitter:title" content="Contrast for UI">
+<meta name="twitter:description" content="A macOS app for quick access to WCAG color contrast ratios.">
+<meta name="twitter:creator" content="@usecontrast">
+<meta name="twitter:image:src" content="/og/{{ foreground }}/{{ background }}.png">
+<meta property="og:title" content="Contrast for UI">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://usecontrast.com"/>
+<meta property="og:image" content="/og/{{ foreground }}/{{ background }}.png">
+<meta property="og:description" content="A macOS app for quick access to WCAG color contrast ratios.">
+<meta property="og:site_name" content="Contrast for UI">
 <style>
   .contrast-score h2, .contrast-score h3, .contrast-data h4 { color: #{{ foreground }} }
   .contrast-score-content { background: #{{ background }} }
