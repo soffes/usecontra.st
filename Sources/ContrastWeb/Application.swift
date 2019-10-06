@@ -62,7 +62,9 @@ final class Application {
             "score": score.description,
             "foreground": foreground.hex,
             "background": background.hex,
-            "extendedDescription": score.extendedDescription
+            "extendedDescription": score.extendedDescription,
+            "metaDescription": "WCAG color contrast rating for #\(foreground.hex) and #\(background.hex).",
+            "ogImageURL": "https://usecontra.st/og/\(foreground.hex)/\(background.hex).png"
         ]
 
         do {
