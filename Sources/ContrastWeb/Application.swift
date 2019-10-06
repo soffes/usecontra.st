@@ -24,7 +24,7 @@ final class Application {
 
         // Configure routes
         router.get("/og/:foreground/:background.png", handler: openGraphImage)
-        router.get("/:foreground([0-9a-fA-F]{3,6})/:background([0-9a-fA-F]{3,6})", handler: score)
+        router.get("/:foreground/:background", handler: score)
         router.get(handler: catchAll)
 
         Kitura.addHTTPServer(onPort: self.port, with: router)
