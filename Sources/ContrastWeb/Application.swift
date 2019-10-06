@@ -22,7 +22,6 @@ final class Application {
         let options = StaticFileServer.Options(serveIndexForDirectory: false)
         router.all("/assets", middleware: StaticFileServer(path: "./assets", options: options))
 
-        // Configure routes
         router.get("/og/:foreground/:background.png", handler: openGraphImage)
         router.get("/:foreground/:background", handler: score)
         router.get(handler: catchAll)
@@ -55,7 +54,6 @@ final class Application {
         let ratio = foreground.contrastRatio(to: background)
         let formattedRatio = String(format: "%0.2f", ratio)
         let score = ConformanceLevel(contrastRatio: ratio)
-
         let context: [String: String] = [
             "title": "\(score.description) \(formattedRatio)",
             "ratio": formattedRatio,
@@ -67,13 +65,7 @@ final class Application {
             "ogImageURL": "https://usecontra.st/og/\(foreground.hex)/\(background.hex).png"
         ]
 
-        do {
-            try response.render("score.stencil", context: context)
-        } catch {
-            response.error = error
-            next()
-        }
-
+        try response.render("score.stencil", context: context)
         response.status(.OK)
     }
 
@@ -92,14 +84,11 @@ final class Application {
         }
 
         response.headers["Content-Type"] = "image/png"
-
-        let imageData = try ImageGenerator.generate(foreground: foreground, background: background)
-        response.send(data: imageData)
+        response.send(data: try ImageGenerator.generate(foreground: foreground, background: background))
     }
 
     private func catchAll(request: RouterRequest, response: RouterResponse, next: @escaping () -> Void) throws {
         let path = request.parsedURL.path ?? "/"
-
         if path.hasPrefix("/assets/") {
             next()
             return
