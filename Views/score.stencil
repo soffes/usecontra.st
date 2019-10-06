@@ -1,14 +1,14 @@
 {% extends "layout.stencil" %}
 {% block head %}
-    <meta itemprop="name" content="{{ title }}">
+    <meta itemprop="name" content="Contrast - {{ title }}">
     <meta itemprop="description" content="{{ metaDescription }}">
     <meta itemprop="image" content="{{ ogImageURL }}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@usecontrast">
-    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:title" content="Contrast - {{ title }}">
     <meta name="twitter:description" content="{{ metaDescription }}">
     <meta name="twitter:image" content="{{ ogImageURL }}">
-    <meta property="og:title" content="{{ title }}">
+    <meta property="og:title" content="Contrast - {{ title }}">
     <meta property="og:type" content="article">
     <meta property="og:url" content="http://usecontra.st/{{ foreground }}/{{ background }}"/>
     <meta property="og:image" content="{{ ogImageURL }}">
