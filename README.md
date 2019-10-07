@@ -11,7 +11,7 @@ Simple site written in Swift that shows the contrast of two colors using the [Co
 5. Select `ContrastWeb` from the dropdown in the top left (not `ContrastWeb-Package`)
 6. Click ▶️
 
-Now the site is running at [localhost:8080](http://localhost:8080)
+Now the site is running at [localhost:8080](http://localhost:8080). Try something like [localhost:8080/fff/000](http://localhost:8080/fff/000) since the root redirects to the marketing site.
 
 ## Deploying
 
@@ -50,3 +50,5 @@ Be sure to update the version number in the image name.
 ``` shell
 $ gcloud beta run deploy contrast-web --image gcr.io/usecontrast/contrast-web:v2
 ```
+
+You can also use [the console](https://console.cloud.google.com/run/detail/us-central1/contrast/revisions?project=usecontrast).
