@@ -5,10 +5,11 @@ Simple site written in Swift that shows the contrast of two colors using the [Co
 ## Running locally
 
 1. Install Xcode 11
-2. Run `swift package generate-xcodeproj`
-3. Open ContrastWeb.xcodeproj
-4. Select `ContrastWeb` from the dropdown in the top left (not `ContrastWeb-Package`)
-5. Click ▶️
+2. Run `brew install cairo`. (You’ll need [Homebrew](https://brew.sh) for this.)
+3. Run `swift package generate-xcodeproj`
+4. Open ContrastWeb.xcodeproj
+5. Select `ContrastWeb` from the dropdown in the top left (not `ContrastWeb-Package`)
+6. Click ▶️
 
 Now the site is running at [localhost:8080](http://localhost:8080)
 
